@@ -37,52 +37,92 @@ async def refresh_cookies() -> str:
         )
         page = await context.new_page()
 
-        # Navigate to login (use domcontentloaded — networkidle times out
-        # because Twitter keeps WebSocket connections open)
-        await page.goto("https://x.com/i/flow/login", wait_until="domcontentloaded", timeout=60000)
-        await page.wait_for_timeout(3000)
-
-        # Enter email
-        email_input = page.get_by_label("Phone, email, or username")
-        await email_input.wait_for(state="visible", timeout=15000)
-        await email_input.fill(email)
-        await page.get_by_role("button", name="Next").click()
-        await page.wait_for_timeout(2000)
-
-        # Check for unusual activity challenge (username verification)
-        challenge = page.get_by_label("Phone or username")
-        if await challenge.is_visible():
-            await challenge.fill(username)
-            await page.get_by_test_id("ocfEnterTextNextButton").click()
-            await page.wait_for_timeout(2000)
-
-        # Enter password
-        password_input = page.get_by_label("Password", exact=False)
-        await password_input.wait_for(state="visible", timeout=10000)
-        await password_input.fill(password)
-        await page.get_by_test_id("LoginForm_Login_Button").click()
-
-        # Wait for redirect to home
         try:
-            await page.wait_for_url("**/home", timeout=15000)
-        except Exception:
-            # Check if we landed somewhere else valid
-            if "x.com" not in page.url or "login" in page.url:
-                print(f"Login failed — stuck at {page.url}", file=sys.stderr)
+            # Navigate to login
+            print("Navigating to login page...", file=sys.stderr)
+            await page.goto(
+                "https://x.com/i/flow/login",
+                wait_until="domcontentloaded",
+                timeout=60000,
+            )
+            await page.wait_for_timeout(5000)
+
+            # Enter email
+            print("Entering email...", file=sys.stderr)
+            email_input = page.get_by_label("Phone, email, or username")
+            await email_input.wait_for(state="visible", timeout=30000)
+            await email_input.fill(email)
+            await page.get_by_role("button", name="Next").click()
+            await page.wait_for_timeout(3000)
+
+            # Check for unusual activity challenge (username verification)
+            # Try multiple possible selectors
+            challenge = page.get_by_label("Phone or username")
+            challenge_alt = page.get_by_test_id("ocfEnterTextTextInput")
+            if await challenge.is_visible() or await challenge_alt.is_visible():
+                print("Unusual activity challenge detected, entering username...", file=sys.stderr)
+                target = challenge if await challenge.is_visible() else challenge_alt
+                await target.fill(username)
+                # Try both possible button selectors
+                try:
+                    await page.get_by_test_id("ocfEnterTextNextButton").click()
+                except Exception:
+                    await page.get_by_role("button", name="Next").click()
+                await page.wait_for_timeout(3000)
+
+            # Enter password — wait longer and try multiple selectors
+            print("Entering password...", file=sys.stderr)
+            password_input = page.get_by_label("Password", exact=False)
+            try:
+                await password_input.wait_for(state="visible", timeout=20000)
+            except Exception:
+                # Take screenshot for debugging
+                await page.screenshot(path="/tmp/twitter_login_debug.png")
+                print(f"Password field not found. Current URL: {page.url}", file=sys.stderr)
+                print("Screenshot saved to /tmp/twitter_login_debug.png", file=sys.stderr)
+                # Try to print what's on page
+                content = await page.content()
+                print(f"Page content length: {len(content)}", file=sys.stderr)
+                raise
+
+            await password_input.fill(password)
+            await page.get_by_test_id("LoginForm_Login_Button").click()
+
+            # Wait for redirect to home
+            print("Waiting for login redirect...", file=sys.stderr)
+            try:
+                await page.wait_for_url("**/home", timeout=20000)
+            except Exception:
+                if "x.com" not in page.url or "login" in page.url:
+                    await page.screenshot(path="/tmp/twitter_login_debug.png")
+                    print(f"Login failed — stuck at {page.url}", file=sys.stderr)
+                    await browser.close()
+                    sys.exit(1)
+
+            await page.wait_for_timeout(2000)
+            print("Login successful!", file=sys.stderr)
+
+            # Extract all cookies including httpOnly
+            all_cookies = await context.cookies("https://x.com")
+            cookies_dict = {c["name"]: c["value"] for c in all_cookies}
+
+            if "auth_token" not in cookies_dict:
+                print("Error: auth_token not found in cookies", file=sys.stderr)
+                print(f"Available cookies: {list(cookies_dict.keys())}", file=sys.stderr)
                 await browser.close()
                 sys.exit(1)
 
-        await page.wait_for_timeout(2000)
+            print(f"Extracted {len(cookies_dict)} cookies", file=sys.stderr)
 
-        # Extract all cookies including httpOnly
-        all_cookies = await context.cookies("https://x.com")
-        cookies_dict = {c["name"]: c["value"] for c in all_cookies}
-
-        # Verify we got the critical auth cookies
-        if "auth_token" not in cookies_dict:
-            print("Error: auth_token not found in cookies", file=sys.stderr)
+        except Exception as e:
+            # Upload screenshot as artifact if available
+            try:
+                await page.screenshot(path="/tmp/twitter_login_debug.png")
+                print("Debug screenshot saved to /tmp/twitter_login_debug.png", file=sys.stderr)
+            except Exception:
+                pass
             await browser.close()
-            sys.exit(1)
+            raise
 
         await browser.close()
 

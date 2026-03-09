@@ -33,3 +33,11 @@ jobs:
           COOKIES_B64: ${{ steps.cookies.outputs.cookies_b64 }}
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: gh secret set TWITTER_COOKIES_B64 --body "$COOKIES_B64"
+
+      - name: Upload debug screenshot on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: twitter-login-debug
+          path: /tmp/twitter_login_debug.png
+          if-no-files-found: ignore
