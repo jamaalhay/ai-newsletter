@@ -1,0 +1,35 @@
+name: Refresh Twitter Cookies
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly on Sunday midnight UTC
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v4
+
+      - run: uv sync
+
+      - name: Install Playwright
+        run: uv run playwright install chromium --with-deps
+
+      - name: Refresh cookies
+        id: cookies
+        run: |
+          COOKIES_B64=$(uv run python scripts/refresh_cookies.py)
+          echo "cookies_b64=$COOKIES_B64" >> "$GITHUB_OUTPUT"
+        env:
+          TWITTER_USERNAME: ${{ secrets.TWITTER_USERNAME }}
+          TWITTER_EMAIL: ${{ secrets.TWITTER_EMAIL }}
+          TWITTER_PASSWORD: ${{ secrets.TWITTER_PASSWORD }}
+
+      - name: Update TWITTER_COOKIES_B64 secret
+        env:
+          COOKIES_B64: ${{ steps.cookies.outputs.cookies_b64 }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: gh secret set TWITTER_COOKIES_B64 --body "$COOKIES_B64"
