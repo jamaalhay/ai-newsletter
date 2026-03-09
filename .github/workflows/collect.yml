@@ -1,0 +1,40 @@
+name: Collect AI News
+
+on:
+  schedule:
+    - cron: '0 */3 * * *'
+  workflow_dispatch:
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v4
+
+      - run: uv sync
+
+      - name: Decode Twitter cookies
+        run: echo "$TWITTER_COOKIES_B64" | base64 -d > cookies.json
+        env:
+          TWITTER_COOKIES_B64: ${{ secrets.TWITTER_COOKIES_B64 }}
+
+      - name: Run collectors
+        run: uv run python -m src.cli collect
+        env:
+          TWITTER_USERNAME: ${{ secrets.TWITTER_USERNAME }}
+          TWITTER_EMAIL: ${{ secrets.TWITTER_EMAIL }}
+          TWITTER_PASSWORD: ${{ secrets.TWITTER_PASSWORD }}
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
+          REDDIT_PASSWORD: ${{ secrets.REDDIT_PASSWORD }}
+
+      - name: Commit collected data
+        run: |
+          git config user.name "newsletter-bot"
+          git config user.email "bot@newsletter"
+          git add data/items.jsonl
+          git diff --staged --quiet || git commit -m "chore: collect $(date -u +%Y-%m-%dT%H:%M)"
+          git push
