@@ -46,3 +46,29 @@ RATE_LIMIT_DELAY = 3  # seconds between API calls
 SUMMARIZE_MODEL = "claude-haiku-4-5-20251001"
 DAILY_TOP_N = 30
 WEEKLY_TOP_N = 60
+
+# Composite ranking weights
+RANK_WEIGHT_SCORE = 0.40
+RANK_WEIGHT_ENGAGEMENT = 0.20
+RANK_WEIGHT_SOURCE = 0.20
+RANK_WEIGHT_RECENCY = 0.20
+
+# Source quality multipliers (higher = more trusted/signal-rich)
+SOURCE_WEIGHTS = {
+    "reddit": {
+        "MachineLearning": 2.0,
+        "artificial": 1.5,
+        "LocalLLaMA": 1.8,
+        "ChatGPT": 1.0,
+        "singularity": 0.8,
+    },
+    "twitter": {
+        # High-signal accounts
+        "karpathy": 2.5,
+        "sama": 2.0,
+        "ylecun": 2.0,
+        "AndrewYNg": 2.0,
+        # Timeline/search defaults
+        "_default": 1.0,
+    },
+}

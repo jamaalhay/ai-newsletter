@@ -1,15 +1,16 @@
 DAILY_PROMPT = """You're writing a short AI news briefing for a non-technical audience.
-Here are today's top items:
+Here are today's top items (ranked by a composite of popularity, discussion quality, source credibility, and recency):
 
 {items}
 
 Rules:
-- 3-7 bullet points, each 1-3 sentences
+- Exactly 10 bullet points, each 1-3 sentences
 - Group related items (same model launch = one item)
 - Lead with biggest news
 - Explain jargon in parentheses
 - Include "Why it matters" angle
 - Skip drama/memes — only concrete developments
+- If fewer than 10 distinct stories exist, include notable discussion topics or emerging trends
 - End with "Bottom line" one-liner
 - Output valid HTML with <ul><li> structure
 - Do NOT include <html>, <head>, or <body> tags — just the content HTML"""
