@@ -23,7 +23,17 @@ def _call_claude(prompt: str) -> str:
         max_tokens=4096,
         messages=[{"role": "user", "content": prompt}],
     )
-    return message.content[0].text
+    text = message.content[0].text
+    # Strip markdown code fences if Claude wraps the HTML in them
+    if text.startswith("```"):
+        lines = text.split("\n")
+        # Remove first line (```html) and last line (```)
+        if lines[-1].strip() == "```":
+            lines = lines[1:-1]
+        else:
+            lines = lines[1:]
+        text = "\n".join(lines)
+    return text
 
 
 def generate_daily(dry_run: bool = False) -> str:
