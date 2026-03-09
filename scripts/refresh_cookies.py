@@ -37,12 +37,14 @@ async def refresh_cookies() -> str:
         )
         page = await context.new_page()
 
-        # Navigate to login
-        await page.goto("https://x.com/i/flow/login", wait_until="networkidle")
-        await page.wait_for_timeout(2000)
+        # Navigate to login (use domcontentloaded — networkidle times out
+        # because Twitter keeps WebSocket connections open)
+        await page.goto("https://x.com/i/flow/login", wait_until="domcontentloaded", timeout=60000)
+        await page.wait_for_timeout(3000)
 
         # Enter email
         email_input = page.get_by_label("Phone, email, or username")
+        await email_input.wait_for(state="visible", timeout=15000)
         await email_input.fill(email)
         await page.get_by_role("button", name="Next").click()
         await page.wait_for_timeout(2000)
@@ -56,6 +58,7 @@ async def refresh_cookies() -> str:
 
         # Enter password
         password_input = page.get_by_label("Password", exact=False)
+        await password_input.wait_for(state="visible", timeout=10000)
         await password_input.fill(password)
         await page.get_by_test_id("LoginForm_Login_Button").click()
 
