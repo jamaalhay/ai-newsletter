@@ -130,6 +130,12 @@ async def collect() -> list[dict]:
         except Exception as e:
             logger.error(f"User tweets error for @{username}: {e}")
 
+    if not items:
+        logger.error(
+            "TWITTER_COOKIES_EXPIRED: collected 0 items. "
+            "Refresh cookies locally: source .env && uv run python scripts/refresh_cookies.py"
+        )
+
     logger.info(f"Twitter: collected {len(items)} items")
     return items
 

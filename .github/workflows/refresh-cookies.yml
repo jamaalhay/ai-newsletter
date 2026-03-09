@@ -1,8 +1,17 @@
 name: Refresh Twitter Cookies
 
+# Twitter blocks login from datacenter IPs, so this workflow
+# cannot run automated cookie refresh. Instead, run locally:
+#
+#   source .env && uv run python scripts/refresh_cookies.py
+#
+# This updates both cookies.json and the TWITTER_COOKIES_B64 secret.
+# The auth_token cookie lasts ~5 years, so this is rarely needed.
+#
+# This workflow exists as a manual fallback — it may work if
+# Twitter relaxes datacenter IP restrictions in the future.
+
 on:
-  schedule:
-    - cron: '0 0 * * 0'  # Weekly on Sunday midnight UTC
   workflow_dispatch:
 
 jobs:
