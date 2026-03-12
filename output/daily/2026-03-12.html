@@ -1,0 +1,1860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Newsletter — 2026-03-12</title>
+<style>
+  :root { --bg: #fff; --fg: #1a1a1a; --muted: #666; --border: #e0e0e0; --accent: #2563eb; --card-bg: #f9fafb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0f172a; --fg: #e2e8f0; --muted: #94a3b8; --border: #334155; --accent: #60a5fa; --card-bg: #1e293b; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--fg); max-width: 800px; margin: 0 auto; padding: 24px 16px; line-height: 1.6; }
+  h1 { font-size: 1.5rem; margin-bottom: 4px; }
+  .date { color: var(--muted); margin-bottom: 24px; }
+  .summary { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 32px; }
+  .summary ul { padding-left: 20px; }
+  .summary li { margin-bottom: 12px; }
+  h2 { font-size: 1.2rem; margin: 24px 0 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--border); }
+  th { font-weight: 600; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; }
+  td a { color: var(--accent); text-decoration: none; }
+  td a:hover { text-decoration: underline; }
+  .content-cell { max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  details { margin-top: 32px; }
+  summary { cursor: pointer; font-weight: 600; color: var(--accent); }
+  .back { display: inline-block; margin-bottom: 16px; color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<a href="../index.html" class="back">&larr; All summaries</a>
+<h1>AI News Briefing</h1>
+<p class="date">2026-03-12</p>
+
+<div class="summary">
+<ul>
+<li><strong>AI assistants gain real-world tool access:</strong> Claude now integrates seamlessly with Excel and PowerPoint, while Unusual Whales launched an MCP Server giving AI direct access to live stock market data. This marks a shift from AI as conversational tools to AI as practical business assistants. <em>Why it matters:</em> AI can now directly manipulate your files and access real financial data, making it a genuine productivity multiplier rather than just a chat interface.</li>
+
+<li><strong>How to get better answers from AI:</strong> Andrej Karpathy (Tesla's former AI lead) suggests framing prompts differently—ask "what would X group say about this?" rather than "what do you think?" because LLMs are simulators channeling different perspectives, not entities with personal opinions. <em>Why it matters:</em> This reframes how people should interact with AI to get more accurate, nuanced responses.</li>
+
+<li><strong>The future of programming is agent-based:</strong> Despite predictions that IDEs (integrated development environments—the software tools programmers use) are dead, Karpathy argues we're actually building "bigger IDEs" where humans program at a higher level, orchestrating AI agents rather than writing individual files. <em>Why it matters:</em> Programming work is fundamentally changing, but it's still programming—just delegating routine tasks to AI.</li>
+
+<li><strong>Perplexity launches always-on personal AI:</strong> The search-focused AI company announced "Personal Computer," a continuously running service on Mac devices that learns your files, apps, and habits to provide 24/7 assistance. <em>Why it matters:</em> This represents a new category of AI that's localized, privacy-focused, and always available rather than requiring manual queries.</li>
+
+<li><strong>Cloudflare simplifies web scraping:</strong> The infrastructure company released a new /crawl API endpoint that lets developers extract entire website content (in HTML, Markdown, or JSON) with a single command instead of managing complex browser automation. <em>Why it matters:</em> This removes technical barriers for building applications that need to analyze or aggregate web content.</li>
+
+<li><strong>Learning platform Wondering launches:</strong> A former NotebookLM team member released Wondering, which turns any topic into guided learning paths with bite-sized visual lessons similar to Duolingo's approach. <em>Why it matters:</em> This democratizes personalized education by applying proven engagement techniques from language learning to any subject.</li>
+
+<li><strong>AI infrastructure faces resilience challenges:</strong> Karpathy noted that an OAuth outage disrupted AI research operations, highlighting a concern about "intelligence brownouts"—periods when AI systems go down and reduce collective productivity. <em>Why it matters:</em> As society depends more on AI infrastructure, outages create cascading real-world disruptions beyond typical software failures.</li>
+
+<li><strong>One Piece live-action adaptation sparks debate:</strong> The manga creator's approval of the Netflix adaptation has created interesting tension in the fan community about authenticity versus official endorsement in adaptation quality discussions. <em>Why it matters:</em> This reflects broader questions about how fan communities evaluate adaptations when creator approval conflicts with personal preferences.</li>
+
+<li><strong>Karpathy warns of AI security concerns:</strong> In a concerning post, someone expressed alarm that LLMs are being deployed for high-stakes decisions (with a vague reference to weaponization) despite limitations in more basic tasks, raising questions about responsible AI deployment. <em>Why it matters:</em> This highlights the gap between AI capabilities and the criticality of systems it's being used in, a key safety consideration.</li>
+
+<li><strong>Enterprise AI integrations accelerate:</strong> Multiple announcements (Claude for Office, Perplexity Personal Computer, Wondering) show AI companies racing to embed their systems into everyday professional tools rather than remaining isolated chat interfaces. <em>Why it matters:</em> The real AI revolution isn't about chatbots—it's about AI becoming invisible infrastructure woven into existing workflows.</li>
+</ul>
+
+<p><strong>Bottom line:</strong> AI is rapidly moving from novelty to infrastructure—embedding itself in finance, productivity software, and learning tools while raising new questions about reliability and responsible deployment.</p>
+</div>
+
+<h2>Top Items</h2>
+<table>
+  <thead>
+    <tr><th>Source</th><th>Author</th><th>Content</th><th>Score</th><th>Link</th></tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@karpathy</td>
+      <td class="content-cell">Don&#39;t think of LLMs as entities but as simulators. For example, when exploring a topic, don&#39;t ask:
+
+</td>
+      <td>27831</td>
+      <td><a href="https://x.com/karpathy/status/1997731268969304070" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@ChihiroDLoki</td>
+      <td class="content-cell">One piece Action vs Anime https://t.co/kMT0eMELZS</td>
+      <td>44716</td>
+      <td><a href="https://x.com/ChihiroDLoki/status/2031421754254512153" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@whotfisjovana</td>
+      <td class="content-cell">saving Megan Fox in your contacts under “transformers” is diabolical</td>
+      <td>12947</td>
+      <td><a href="https://x.com/whotfisjovana/status/2031884644506104099" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@karpathy</td>
+      <td class="content-cell">Expectation: the age of the IDE is over
+Reality: we’re going to need a bigger IDE
+(imo).
+
+It just lo</td>
+      <td>3753</td>
+      <td><a href="https://x.com/karpathy/status/2031767720933634100" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@ohlookitsrafa</td>
+      <td class="content-cell">Bam if he was in that helicopter https://t.co/fNJ7PM7h5E</td>
+      <td>35669</td>
+      <td><a href="https://x.com/ohlookitsrafa/status/2031553193465762099" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@DiscussingRDC</td>
+      <td class="content-cell">Bam gotta watch his back now 😂🤣 https://t.co/gOJQs1itwc</td>
+      <td>16963</td>
+      <td><a href="https://x.com/DiscussingRDC/status/2031766160597750100" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@CryptoCyberia</td>
+      <td class="content-cell">Oh my fucking God, they actually did bomb that school because of vibe warring.
+Jesus fucking Christ.</td>
+      <td>5265</td>
+      <td><a href="https://x.com/CryptoCyberia/status/2031902792978153811" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@TheBTCTherapist</td>
+      <td class="content-cell">I’M COMPLETELY LOST FOR WORDS 😂</td>
+      <td>5352</td>
+      <td><a href="https://x.com/TheBTCTherapist/status/2031899714635874478" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@BSOLZ_</td>
+      <td class="content-cell">80K????
+
+Bro is his PR unfixable??? He didn’t even do anything tonight 😭😭😭</td>
+      <td>21128</td>
+      <td><a href="https://x.com/BSOLZ_/status/2031597308270276705" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@karpathy</td>
+      <td class="content-cell">My autoresearch labs got wiped out in the oauth outage. Have to think through failovers. Intelligenc</td>
+      <td>1297</td>
+      <td><a href="https://x.com/karpathy/status/2031792523187040643" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@cgtwts</td>
+      <td class="content-cell">All those years of refusing to learn excel and PowerPoint is about to pay off https://t.co/q0f6Zyk1b</td>
+      <td>8101</td>
+      <td><a href="https://x.com/cgtwts/status/2031794036403814537" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@mokone_rato</td>
+      <td class="content-cell">You know what I’m sat 😭😭😭😭</td>
+      <td>5573</td>
+      <td><a href="https://x.com/mokone_rato/status/2031765348375032291" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@unusual_whales</td>
+      <td class="content-cell">BREAKING: We just gave Claude access to the entire options and stock market and it&#39;s not a demo.  
+
+</td>
+      <td>4651</td>
+      <td><a href="https://x.com/unusual_whales/status/2031851804049490345" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@SixPathsRay</td>
+      <td class="content-cell">One Piece fans forcing themselves to love everything in the live action because Oda approved it http</td>
+      <td>6685</td>
+      <td><a href="https://x.com/SixPathsRay/status/2031754806780363010" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@__stvnnn</td>
+      <td class="content-cell">Les studios de cinéma ont enfin décidé d’engager les pro-édit de TikTok pour leurs trailers et voilà</td>
+      <td>6692</td>
+      <td><a href="https://x.com/__stvnnn/status/2031499899468968194" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@CloudflareDev</td>
+      <td class="content-cell">Introducing the new /crawl endpoint - one API call and an entire site crawled.
+
+No scripts. No brows</td>
+      <td>8072</td>
+      <td><a href="https://x.com/CloudflareDev/status/2031488099725754821" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@NekiasNBA</td>
+      <td class="content-cell">aye hold on lol</td>
+      <td>1411</td>
+      <td><a href="https://x.com/NekiasNBA/status/2031827956012630166" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@chxnluh</td>
+      <td class="content-cell">This is legit the worst day of his life LMAOOOOOO https://t.co/49zaC0SmVw</td>
+      <td>5816</td>
+      <td><a href="https://x.com/chxnluh/status/2031663284156338307" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@YourFellowArab</td>
+      <td class="content-cell">We’re living in an alternate timeline.</td>
+      <td>1759</td>
+      <td><a href="https://x.com/YourFellowArab/status/2031905656597299572" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@TennisChannel</td>
+      <td class="content-cell">THE BEST POINT YOU&#39;RE EVER GONNA SEE ON A TENNIS COURT 🤯 
+
+SIMPLY OUTRAGEOUS FROM NOVAK AND JACK!!
+
+</td>
+      <td>1645</td>
+      <td><a href="https://x.com/TennisChannel/status/2031924837069766920" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@0xSisyphus</td>
+      <td class="content-cell">Stuff like this will make it into history books</td>
+      <td>1673</td>
+      <td><a href="https://x.com/0xSisyphus/status/2031896536565551380" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@d0nut2x</td>
+      <td class="content-cell">&#34;AO ASHI&#34; Season 2 NEW TRAILER
+
+Director: Kazuki Yokoyama
+Animation Production: TMS Entertainment
+Br</td>
+      <td>1173</td>
+      <td><a href="https://x.com/d0nut2x/status/2031930406480589135" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@perplexity_ai</td>
+      <td class="content-cell">Announcing Personal Computer.
+
+Personal Computer is an always on, local merge with Perplexity Comput</td>
+      <td>3608</td>
+      <td><a href="https://x.com/perplexity_ai/status/2031790180521427166" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@chiweethedog</td>
+      <td class="content-cell">This is the worst day to be a Kobe fan smh</td>
+      <td>4991</td>
+      <td><a href="https://x.com/chiweethedog/status/2031598016508080265" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@TheChefKayy</td>
+      <td class="content-cell">Yeah he deserved those free throws lol he was bullying them, he was aggressive and they couldn’t gua</td>
+      <td>3593</td>
+      <td><a href="https://x.com/TheChefKayy/status/2031583456841576934" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@keatsdidit</td>
+      <td class="content-cell">When she watches One Piece 🏴‍☠️ https://t.co/g9RBKzMkAN</td>
+      <td>1641</td>
+      <td><a href="https://x.com/keatsdidit/status/2031827197397233718" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@HcwXd</td>
+      <td class="content-cell">I left NotebookLM a few months ago to solve a bigger problem in learning.
+
+Today, as the first step,</td>
+      <td>1637</td>
+      <td><a href="https://x.com/HcwXd/status/2031787418467311801" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@claudeai</td>
+      <td class="content-cell">Claude for Excel and Claude for PowerPoint now sync together seamlessly.
+
+When you’ve got more than </td>
+      <td>2816</td>
+      <td><a href="https://x.com/claudeai/status/2031790754637717772" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@asud683385</td>
+      <td class="content-cell">Novak Djokovic wins &#34;the best point you will ever see&#34; https://t.co/qyT2Rlnmas</td>
+      <td>1202</td>
+      <td><a href="https://x.com/asud683385/status/2031925123637493852" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@WadexFlash</td>
+      <td class="content-cell">https://t.co/pQEGNqjFXE</td>
+      <td>3771</td>
+      <td><a href="https://x.com/WadexFlash/status/2031609075369160913" target="_blank">view</a></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+<details>
+  <summary>All collected items (164)</summary>
+  <table>
+    <thead>
+      <tr><th>Source</th><th>Author</th><th>Content</th><th>Score</th><th>Link</th></tr>
+    </thead>
+    <tbody>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@karpathy</td>
+        <td class="content-cell">Don&#39;t think of LLMs as entities but as simulators. For example, when exploring a topic, don&#39;t ask:
+
+</td>
+        <td>27831</td>
+        <td><a href="https://x.com/karpathy/status/1997731268969304070" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@ChihiroDLoki</td>
+        <td class="content-cell">One piece Action vs Anime https://t.co/kMT0eMELZS</td>
+        <td>44716</td>
+        <td><a href="https://x.com/ChihiroDLoki/status/2031421754254512153" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@whotfisjovana</td>
+        <td class="content-cell">saving Megan Fox in your contacts under “transformers” is diabolical</td>
+        <td>12947</td>
+        <td><a href="https://x.com/whotfisjovana/status/2031884644506104099" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@karpathy</td>
+        <td class="content-cell">Expectation: the age of the IDE is over
+Reality: we’re going to need a bigger IDE
+(imo).
+
+It just lo</td>
+        <td>3753</td>
+        <td><a href="https://x.com/karpathy/status/2031767720933634100" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@ohlookitsrafa</td>
+        <td class="content-cell">Bam if he was in that helicopter https://t.co/fNJ7PM7h5E</td>
+        <td>35669</td>
+        <td><a href="https://x.com/ohlookitsrafa/status/2031553193465762099" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@DiscussingRDC</td>
+        <td class="content-cell">Bam gotta watch his back now 😂🤣 https://t.co/gOJQs1itwc</td>
+        <td>16963</td>
+        <td><a href="https://x.com/DiscussingRDC/status/2031766160597750100" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@CryptoCyberia</td>
+        <td class="content-cell">Oh my fucking God, they actually did bomb that school because of vibe warring.
+Jesus fucking Christ.</td>
+        <td>5265</td>
+        <td><a href="https://x.com/CryptoCyberia/status/2031902792978153811" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@TheBTCTherapist</td>
+        <td class="content-cell">I’M COMPLETELY LOST FOR WORDS 😂</td>
+        <td>5352</td>
+        <td><a href="https://x.com/TheBTCTherapist/status/2031899714635874478" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@BSOLZ_</td>
+        <td class="content-cell">80K????
+
+Bro is his PR unfixable??? He didn’t even do anything tonight 😭😭😭</td>
+        <td>21128</td>
+        <td><a href="https://x.com/BSOLZ_/status/2031597308270276705" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@karpathy</td>
+        <td class="content-cell">My autoresearch labs got wiped out in the oauth outage. Have to think through failovers. Intelligenc</td>
+        <td>1297</td>
+        <td><a href="https://x.com/karpathy/status/2031792523187040643" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@cgtwts</td>
+        <td class="content-cell">All those years of refusing to learn excel and PowerPoint is about to pay off https://t.co/q0f6Zyk1b</td>
+        <td>8101</td>
+        <td><a href="https://x.com/cgtwts/status/2031794036403814537" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@mokone_rato</td>
+        <td class="content-cell">You know what I’m sat 😭😭😭😭</td>
+        <td>5573</td>
+        <td><a href="https://x.com/mokone_rato/status/2031765348375032291" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@unusual_whales</td>
+        <td class="content-cell">BREAKING: We just gave Claude access to the entire options and stock market and it&#39;s not a demo.  
+
+</td>
+        <td>4651</td>
+        <td><a href="https://x.com/unusual_whales/status/2031851804049490345" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@SixPathsRay</td>
+        <td class="content-cell">One Piece fans forcing themselves to love everything in the live action because Oda approved it http</td>
+        <td>6685</td>
+        <td><a href="https://x.com/SixPathsRay/status/2031754806780363010" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@__stvnnn</td>
+        <td class="content-cell">Les studios de cinéma ont enfin décidé d’engager les pro-édit de TikTok pour leurs trailers et voilà</td>
+        <td>6692</td>
+        <td><a href="https://x.com/__stvnnn/status/2031499899468968194" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@CloudflareDev</td>
+        <td class="content-cell">Introducing the new /crawl endpoint - one API call and an entire site crawled.
+
+No scripts. No brows</td>
+        <td>8072</td>
+        <td><a href="https://x.com/CloudflareDev/status/2031488099725754821" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@NekiasNBA</td>
+        <td class="content-cell">aye hold on lol</td>
+        <td>1411</td>
+        <td><a href="https://x.com/NekiasNBA/status/2031827956012630166" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@chxnluh</td>
+        <td class="content-cell">This is legit the worst day of his life LMAOOOOOO https://t.co/49zaC0SmVw</td>
+        <td>5816</td>
+        <td><a href="https://x.com/chxnluh/status/2031663284156338307" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@YourFellowArab</td>
+        <td class="content-cell">We’re living in an alternate timeline.</td>
+        <td>1759</td>
+        <td><a href="https://x.com/YourFellowArab/status/2031905656597299572" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@TennisChannel</td>
+        <td class="content-cell">THE BEST POINT YOU&#39;RE EVER GONNA SEE ON A TENNIS COURT 🤯 
+
+SIMPLY OUTRAGEOUS FROM NOVAK AND JACK!!
+
+</td>
+        <td>1645</td>
+        <td><a href="https://x.com/TennisChannel/status/2031924837069766920" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@0xSisyphus</td>
+        <td class="content-cell">Stuff like this will make it into history books</td>
+        <td>1673</td>
+        <td><a href="https://x.com/0xSisyphus/status/2031896536565551380" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@d0nut2x</td>
+        <td class="content-cell">&#34;AO ASHI&#34; Season 2 NEW TRAILER
+
+Director: Kazuki Yokoyama
+Animation Production: TMS Entertainment
+Br</td>
+        <td>1173</td>
+        <td><a href="https://x.com/d0nut2x/status/2031930406480589135" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@perplexity_ai</td>
+        <td class="content-cell">Announcing Personal Computer.
+
+Personal Computer is an always on, local merge with Perplexity Comput</td>
+        <td>3608</td>
+        <td><a href="https://x.com/perplexity_ai/status/2031790180521427166" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@chiweethedog</td>
+        <td class="content-cell">This is the worst day to be a Kobe fan smh</td>
+        <td>4991</td>
+        <td><a href="https://x.com/chiweethedog/status/2031598016508080265" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@TheChefKayy</td>
+        <td class="content-cell">Yeah he deserved those free throws lol he was bullying them, he was aggressive and they couldn’t gua</td>
+        <td>3593</td>
+        <td><a href="https://x.com/TheChefKayy/status/2031583456841576934" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@keatsdidit</td>
+        <td class="content-cell">When she watches One Piece 🏴‍☠️ https://t.co/g9RBKzMkAN</td>
+        <td>1641</td>
+        <td><a href="https://x.com/keatsdidit/status/2031827197397233718" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@HcwXd</td>
+        <td class="content-cell">I left NotebookLM a few months ago to solve a bigger problem in learning.
+
+Today, as the first step,</td>
+        <td>1637</td>
+        <td><a href="https://x.com/HcwXd/status/2031787418467311801" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@claudeai</td>
+        <td class="content-cell">Claude for Excel and Claude for PowerPoint now sync together seamlessly.
+
+When you’ve got more than </td>
+        <td>2816</td>
+        <td><a href="https://x.com/claudeai/status/2031790754637717772" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@asud683385</td>
+        <td class="content-cell">Novak Djokovic wins &#34;the best point you will ever see&#34; https://t.co/qyT2Rlnmas</td>
+        <td>1202</td>
+        <td><a href="https://x.com/asud683385/status/2031925123637493852" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@WadexFlash</td>
+        <td class="content-cell">https://t.co/pQEGNqjFXE</td>
+        <td>3771</td>
+        <td><a href="https://x.com/WadexFlash/status/2031609075369160913" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@BullTheoryio</td>
+        <td class="content-cell">BREAKING. Netflix to pay $600 MILLION for Ben Affleck’s secret AI company. 
+
+InterPositive was found</td>
+        <td>1473</td>
+        <td><a href="https://x.com/BullTheoryio/status/2031822992062493135" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@NeoGameSpark</td>
+        <td class="content-cell">ODA ON THE PODCAST!?!?</td>
+        <td>1123</td>
+        <td><a href="https://x.com/NeoGameSpark/status/2031823108391272866" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@rBillSimmonsPod</td>
+        <td class="content-cell">SIMMONS: &#34;Alright, we&#39;re coming to you live for an Emergency Pod right after Bam Adebayo just droppe</td>
+        <td>2576</td>
+        <td><a href="https://x.com/rBillSimmonsPod/status/2031557977732194675" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@sachinyadav699</td>
+        <td class="content-cell">90% of Finance, Data Analysts &amp;amp; business analysts just lost their only skill https://t.co/3qEFuN</td>
+        <td>1399</td>
+        <td><a href="https://x.com/sachinyadav699/status/2031808503862739137" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@RampLabs</td>
+        <td class="content-cell">Today, we&#39;re launching Ramp Agent Cards.
+
+There&#39;s been no safe way for agents to spend money, until </td>
+        <td>1329</td>
+        <td><a href="https://x.com/RampLabs/status/2031792565066891555" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@Codie_Sanchez</td>
+        <td class="content-cell">Me switching all my AI budget to replit… https://t.co/qDtX94pZIn</td>
+        <td>757</td>
+        <td><a href="https://x.com/Codie_Sanchez/status/2031827640387031072" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@heygurisingh</td>
+        <td class="content-cell">Holy shit... Microsoft open sourced an inference framework that runs a 100B parameter LLM on a singl</td>
+        <td>2885</td>
+        <td><a href="https://x.com/heygurisingh/status/2031628875864879386" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@afrogarou</td>
+        <td class="content-cell">Bam can get 83 and yall think Koby aint catching up to Luffy?</td>
+        <td>2311</td>
+        <td><a href="https://x.com/afrogarou/status/2031591438673223803" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@Anubhavhing</td>
+        <td class="content-cell">Crawling an entire website used to take:
+
+A Python script. 
+Playwright or Selenium. 
+Proxy rotation.</td>
+        <td>2623</td>
+        <td><a href="https://x.com/Anubhavhing/status/2031642801805603040" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@XaviercMiller</td>
+        <td class="content-cell">Crazy part is “boring” is probably one of the most important traits in a significant other. Someone </td>
+        <td>1031</td>
+        <td><a href="https://x.com/XaviercMiller/status/2031868319427445234" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@elhllos</td>
+        <td class="content-cell">المشروع دا هو بيتكوين عالم ال AI
+فكرة التدريب اللامركزي لل AI models دي عبقرية وهتدي دفع جامدة لل op</td>
+        <td>803</td>
+        <td><a href="https://x.com/elhllos/status/2031772825086792071" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@AI4S_Catalyst</td>
+        <td class="content-cell">We’re thrilled to open-source LabClaw — the Skill Operating Layer for LabOS by Stanford-Princeton Te</td>
+        <td>936</td>
+        <td><a href="https://x.com/AI4S_Catalyst/status/2031528955472392301" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@nicdunz</td>
+        <td class="content-cell">openai won. its over. this is it</td>
+        <td>2087</td>
+        <td><a href="https://x.com/nicdunz/status/2031510980891398222" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@EXM7777</td>
+        <td class="content-cell">Perplexity building an OpenClaw that works https://t.co/HvcvCD7cDd</td>
+        <td>982</td>
+        <td><a href="https://x.com/EXM7777/status/2031798550850654340" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@Checkmatee27</td>
+        <td class="content-cell">2016 Finals were completely rigged.
+
+Draymond suspended retroactively. Steph fouls out on ghost call</td>
+        <td>926</td>
+        <td><a href="https://x.com/Checkmatee27/status/2031828286092034499" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@rpnickson</td>
+        <td class="content-cell">OpenClaw without the security vulnerabilities.
+
+The closest thing we have to Jarvis today for the av</td>
+        <td>1348</td>
+        <td><a href="https://x.com/rpnickson/status/2031792509009957249" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@HanaHoops</td>
+        <td class="content-cell">Tweets like this make me so incredibly angry cause I didn’t think of it first</td>
+        <td>1943</td>
+        <td><a href="https://x.com/HanaHoops/status/2031606793533575365" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@LaJethroJenkins</td>
+        <td class="content-cell">If you don’t want a player to shoot 43 free throws, a possible solution is to stop fouling the shit </td>
+        <td>1789</td>
+        <td><a href="https://x.com/LaJethroJenkins/status/2031730493780267239" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@_willcompton</td>
+        <td class="content-cell">Full breakdown of how the Ravens pulled off their SCUMBAG (evil genius —also collusion) move by back</td>
+        <td>1452</td>
+        <td><a href="https://x.com/_willcompton/status/2031779220209233984" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@Od3hAllDay</td>
+        <td class="content-cell">It’s easy to boxscore watch. Look at the film, everybody was food tn. The had no answer</td>
+        <td>2001</td>
+        <td><a href="https://x.com/Od3hAllDay/status/2031582515140366839" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@davetist</td>
+        <td class="content-cell">been testing this for a few hours now
+
+openclaw feels like a toy now</td>
+        <td>470</td>
+        <td><a href="https://x.com/davetist/status/2031808220226814368" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@itsolelehmann</td>
+        <td class="content-cell">update: i found the actual video where @helloitsaustin walks through his entire workflow
+
+anthropic </td>
+        <td>1216</td>
+        <td><a href="https://x.com/itsolelehmann/status/2031731224021241890" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@Zigmanfreud</td>
+        <td class="content-cell">Over 2 million “views” now…
+🤔🥲</td>
+        <td>574</td>
+        <td><a href="https://x.com/Zigmanfreud/status/2031740542984540640" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@iam_johnw</td>
+        <td class="content-cell">Stat padding is one thing but Heat players were actually mising free throws so they could foul wizar</td>
+        <td>1271</td>
+        <td><a href="https://x.com/iam_johnw/status/2031737304683778395" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@abxxai</td>
+        <td class="content-cell">BREAKING: 🚨 Someone just tested 35 AI models across 172 billion tokens of real document questions.
+
+</td>
+        <td>1722</td>
+        <td><a href="https://x.com/abxxai/status/2031408810653520087" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@OpenAI</td>
+        <td class="content-cell">Live demo of GPT-4o realtime conversational speech https://t.co/FON78LxAPL</td>
+        <td>1648</td>
+        <td><a href="https://x.com/OpenAI/status/1790130694359806122" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@Futurenvesting</td>
+        <td class="content-cell">OH MY GAWD...
+
+Look at this COMPLETELY CUSTOM dashboard for your own investment portfolios, designed</td>
+        <td>337</td>
+        <td><a href="https://x.com/Futurenvesting/status/2031829736800895059" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@everestchris6</td>
+        <td class="content-cell">My OpenClaw bot runs 6 AI agents 24/7 - and I&#39;m giving away the exact skill file for free:
+
+- Scouts</td>
+        <td>1185</td>
+        <td><a href="https://x.com/everestchris6/status/2030373273163477503" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@kirawontmiss</td>
+        <td class="content-cell">getting paid for selling my data that would’ve gotten stolen by big corporations anyway &amp;gt;&amp;gt;&amp;gt;</td>
+        <td>856</td>
+        <td><a href="https://x.com/kirawontmiss/status/2031771823692517411" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@TukiFromKL</td>
+        <td class="content-cell">🚨 Perplexity just made every AI company look stupid with one announcement.
+
+They&#39;re shipping a Mac m</td>
+        <td>847</td>
+        <td><a href="https://x.com/TukiFromKL/status/2031813119312273747" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@barkmeta</td>
+        <td class="content-cell">This is insane…
+
+Perplexity just put an AI agent inside a Mac mini. You plug it in. It sits on your </td>
+        <td>818</td>
+        <td><a href="https://x.com/barkmeta/status/2031807728335614178" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@linuz90</td>
+        <td class="content-cell">If you&#39;re using @openclaw on Telegram, you need to set up forum topics.
+
+Turns one messy chat into o</td>
+        <td>1514</td>
+        <td><a href="https://x.com/linuz90/status/2030616602782450087" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@badenglishtea</td>
+        <td class="content-cell">If you&#39;ve used Claude, you should very quickly realize that decentralized, open weights AI (moe) nee</td>
+        <td>1151</td>
+        <td><a href="https://x.com/badenglishtea/status/2031565650846691737" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@Replit</td>
+        <td class="content-cell">Introducing Replit Agent 4 - built to unlock your creativity.
+ 
+Plan. Design. Build. All at once. St</td>
+        <td>508</td>
+        <td><a href="https://x.com/Replit/status/2031756892662636983" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@OpenAIDevs</td>
+        <td class="content-cell">GPT-5.4 sets new state of the art results on professional work and computer use, with strong gains o</td>
+        <td>511</td>
+        <td><a href="https://x.com/OpenAIDevs/status/2029620996962242663" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@ihtesham2005</td>
+        <td class="content-cell">Holy shit...Perplexity just made a Mac mini that:
+
+→ never turns off
+→ knows your files, apps, and s</td>
+        <td>707</td>
+        <td><a href="https://x.com/ihtesham2005/status/2031801199121613068" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@KalshiHoops</td>
+        <td class="content-cell">NBA Best Single-Season TS% by a Guard Averaging 25+ PPG:
+
+67.5% — Steph Curry
+66.9% — Steph Curry
+66</td>
+        <td>1096</td>
+        <td><a href="https://x.com/KalshiHoops/status/2031436412466180240" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@heynavtoor</td>
+        <td class="content-cell">🚨BREAKING: AI can now finish your 60-hour workweek in 15 hours while bosses think you&#39;re &#34;grinding&#34; </td>
+        <td>1256</td>
+        <td><a href="https://x.com/heynavtoor/status/2030652164369190947" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@toddsaunders</td>
+        <td class="content-cell">We all knew this was coming… but today I heard about it actually happening.
+
+A seed stage company ba</td>
+        <td>1178</td>
+        <td><a href="https://x.com/toddsaunders/status/2031546116991275511" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@WesterosCentral</td>
+        <td class="content-cell">&#34;He was loosing his arrows into the sky with three  combatants directly parlaying with HIM! It was  </td>
+        <td>939</td>
+        <td><a href="https://x.com/WesterosCentral/status/2031748541178110218" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@OpenAI</td>
+        <td class="content-cell">GPT-5.2 is part of an ongoing set of model improvements. We’re continuing to iterate and work on kno</td>
+        <td>1132</td>
+        <td><a href="https://x.com/OpenAI/status/1999182118212305377" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@0xSero</td>
+        <td class="content-cell">This is the coolest thing I&#39;ve seen all year</td>
+        <td>733</td>
+        <td><a href="https://x.com/0xSero/status/2031723855744577848" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@cgtwts</td>
+        <td class="content-cell">Investment banking analysts and financial analysts right now: https://t.co/BGNnPj2h3x</td>
+        <td>231</td>
+        <td><a href="https://x.com/cgtwts/status/2031932385626112016" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@automaticnba</td>
+        <td class="content-cell">Most scoring attempts in a single game since 2000:
+
+62— Bam Adebayo tonight vs WAS (83 PTS)
+
+55— Kob</td>
+        <td>1084</td>
+        <td><a href="https://x.com/automaticnba/status/2031555894954115179" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@birdabo</td>
+        <td class="content-cell">Anthropic just launched an institute.
+
+they’re mass hiring to study the unemployment their own model</td>
+        <td>781</td>
+        <td><a href="https://x.com/birdabo/status/2031701467477004402" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@TukiFromKL</td>
+        <td class="content-cell">🚨 Are you paying attention right now?
+
+Claude just put a price tag on your senior developer.
+
+$15–25</td>
+        <td>968</td>
+        <td><a href="https://x.com/TukiFromKL/status/2031206015899689238" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@RebeccaChasen</td>
+        <td class="content-cell">Put this in the NBA twitter hall of fame</td>
+        <td>899</td>
+        <td><a href="https://x.com/RebeccaChasen/status/2031586062426866099" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@cszhu</td>
+        <td class="content-cell">prizes: $80k+ USD, free airfare/hotel/ticket to @GoogleCloud next (las vegas this year!), also, I wi</td>
+        <td>185</td>
+        <td><a href="https://x.com/cszhu/status/2031903113746268568" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aakashgupta</td>
+        <td class="content-cell">Google just gave your AI agent a way to access every Workspace API that doesn’t eat half your contex</td>
+        <td>567</td>
+        <td><a href="https://x.com/aakashgupta/status/2029409062367199414" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@im_roy_lee</td>
+        <td class="content-cell">WORLD CUP WORLD CUP WORLD CUP</td>
+        <td>173</td>
+        <td><a href="https://x.com/im_roy_lee/status/2031923442258207220" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aakashgupta</td>
+        <td class="content-cell">Anthropic is trying to damage control on its “supply chain risk” designation, but the damage is done</td>
+        <td>497</td>
+        <td><a href="https://x.com/aakashgupta/status/2027600173036351977" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@k1rallik</td>
+        <td class="content-cell">Student built an AI that proved it mathematically
+
+Three lines towering above every player in 40 yea</td>
+        <td>293</td>
+        <td><a href="https://x.com/k1rallik/status/2031683192445423617" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@DFintelligence</td>
+        <td class="content-cell">C’est le futur dont nous avons besoin, mais la plupart des gens qui ne comprennent pas comment fonct</td>
+        <td>604</td>
+        <td><a href="https://x.com/DFintelligence/status/2031673724848439383" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@sachinyadav699</td>
+        <td class="content-cell">&amp;gt; block bots
+&amp;gt; stop scraping
+&amp;gt; protect websites
+
+Cloudflare 2026:
+
+&amp;gt; scraping as a servi</td>
+        <td>491</td>
+        <td><a href="https://x.com/sachinyadav699/status/2031678903308496964" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@mark_k</td>
+        <td class="content-cell">The upcoming model by @OpenAI will be named GPT-5.3. Which is slightly disappointing as I had hoped </td>
+        <td>618</td>
+        <td><a href="https://x.com/mark_k/status/2013592136575328548" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@VanLathan</td>
+        <td class="content-cell">His sacrifice made my career possible</td>
+        <td>558</td>
+        <td><a href="https://x.com/VanLathan/status/2031722210893959401" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@adamuchigabriel</td>
+        <td class="content-cell">E lá vamos nós com o Mac Mini explodindo novamente...
+
+Perplexity ficou quietinha uns meses mas volt</td>
+        <td>196</td>
+        <td><a href="https://x.com/adamuchigabriel/status/2031803720187470167" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aakashgupta</td>
+        <td class="content-cell">Two Turing-class AI researchers just raised $2B in three weeks to bet against every LLM company on t</td>
+        <td>350</td>
+        <td><a href="https://x.com/aakashgupta/status/2031601588742053918" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aakashgupta</td>
+        <td class="content-cell">Two types of PMs are emerging from the same AI tooling wave.
+
+The first group treats Claude Code and</td>
+        <td>357</td>
+        <td><a href="https://x.com/aakashgupta/status/2026594519035293833" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@WarriorsMuse</td>
+        <td class="content-cell">Wanna know Steph highest ever shot volume in a game relative to Bam today?
+
+It was the Hawks game tw</td>
+        <td>602</td>
+        <td><a href="https://x.com/WarriorsMuse/status/2031554777298120943" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@UltraLinx</td>
+        <td class="content-cell">Ngl this is a smart move. It’s basically OpenClaw.</td>
+        <td>354</td>
+        <td><a href="https://x.com/UltraLinx/status/2031805449909989789" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@cgtwts</td>
+        <td class="content-cell">Anthropic shipped this before microsoft 365 copilot
+
+how did that happen? https://t.co/U3en1Icuev</td>
+        <td>232</td>
+        <td><a href="https://x.com/cgtwts/status/2031799803412431349" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@dr_cintas</td>
+        <td class="content-cell">Claude Code just got an &#34;App Store&#34; for agent skills 🤯
+
+There&#39;s a new massive library with over 250,</td>
+        <td>625</td>
+        <td><a href="https://x.com/dr_cintas/status/2026725771738268135" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@burkov</td>
+        <td class="content-cell">Not the best open weight models, text only, English only. This release in mid 2025 looks like a form</td>
+        <td>221</td>
+        <td><a href="https://x.com/burkov/status/1952905037342228525" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@Ex0byt</td>
+        <td class="content-cell">500ms is no joke.</td>
+        <td>126</td>
+        <td><a href="https://x.com/Ex0byt/status/2031810461339922731" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@F2aldi</td>
+        <td class="content-cell">Free Models update 18 February 2026
+
+Open Code
+- Big Pickle
+- GLM-5 
+- Kimi K2.5
+- MiniMax M2.5 
+
+By</td>
+        <td>389</td>
+        <td><a href="https://x.com/F2aldi/status/2023930912816459830" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aakashgupta</td>
+        <td class="content-cell">Twelve months ago, Claude was a chatbot in a browser tab. You typed a question, you got an answer. T</td>
+        <td>323</td>
+        <td><a href="https://x.com/aakashgupta/status/2023882650289574085" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@developedbyed</td>
+        <td class="content-cell">Opus 4.6 vs GPT 5.4 (high) (2/9)  
+
+prompt: Build a premium Vite + React landing page for Aether, an</td>
+        <td>404</td>
+        <td><a href="https://x.com/developedbyed/status/2029912556492452241" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@VaibhavSisinty</td>
+        <td class="content-cell">Anthropic is valued at $380 billion.
+
+For nearly a year during its fastest growth period, their enti</td>
+        <td>224</td>
+        <td><a href="https://x.com/VaibhavSisinty/status/2031745254064631950" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@NoahEpstein_</td>
+        <td class="content-cell">This is HUGE 
+
+Perplexity just dropped &#34;Personal Computer&#34; - an always-on system you can use on your</td>
+        <td>223</td>
+        <td><a href="https://x.com/NoahEpstein_/status/2031807918530510985" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@AniTrendz</td>
+        <td class="content-cell">&#34;Aoashi&#34; 2nd Season - New Teaser Trailer!
+
+The anime is scheduled for October 4.
+
+Studio: TMS Entert</td>
+        <td>112</td>
+        <td><a href="https://x.com/AniTrendz/status/2031929510149689655" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aakashgupta</td>
+        <td class="content-cell">I’ve been saying for years that the best LLM education comes from people who can compress complexity</td>
+        <td>354</td>
+        <td><a href="https://x.com/aakashgupta/status/2009039103824933222" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@0xPaulius</td>
+        <td class="content-cell">this just unlocked so many new apps I can’t wait to run it up</td>
+        <td>411</td>
+        <td><a href="https://x.com/0xPaulius/status/2031498925950062824" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@VibeMarketer_</td>
+        <td class="content-cell">so you’re telling me perplexity now…
+
+runs 24/7 on a mac mini
+access to all my files
+access to all m</td>
+        <td>204</td>
+        <td><a href="https://x.com/VibeMarketer_/status/2031800778604614079" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@KyleAnthonie</td>
+        <td class="content-cell">NBA Superstar Jalen Brunson is open to representing the Jamaican national basketball team, qualifyin</td>
+        <td>201</td>
+        <td><a href="https://x.com/KyleAnthonie/status/2031744725397467516" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aakashgupta</td>
+        <td class="content-cell">Perplexity literally has an official MCP server on their docs site right now. One-click install for </td>
+        <td>63</td>
+        <td><a href="https://x.com/aakashgupta/status/2031950037031510161" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aakashgupta</td>
+        <td class="content-cell">You should be researching your users more. So I got an expert to give me a masterclass in how to do </td>
+        <td>117</td>
+        <td><a href="https://x.com/aakashgupta/status/2022106031405592776" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@capybaraonchain</td>
+        <td class="content-cell">coolest thing to come out of crypto in like
+
+years</td>
+        <td>235</td>
+        <td><a href="https://x.com/capybaraonchain/status/2031703243613446605" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@brunofaggion</td>
+        <td class="content-cell">Caraca mano, o time de growth da Anthropic ($380B market cap) foi por 10 meses um mano fazendo vibe </td>
+        <td>254</td>
+        <td><a href="https://x.com/brunofaggion/status/2031538837038444578" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@AISafetyMemes</td>
+        <td class="content-cell">Claude is running for president and he published oppo research on himself https://t.co/OLfmSAlsum</td>
+        <td>215</td>
+        <td><a href="https://x.com/AISafetyMemes/status/2031692038329024781" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@alexalbert__</td>
+        <td class="content-cell">Claude for all things knowledge work feels like it is on a very similar trajectory to what agentic c</td>
+        <td>144</td>
+        <td><a href="https://x.com/alexalbert__/status/2031832967845462452" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@heynavtoor</td>
+        <td class="content-cell">I collected every Claude prompt that went viral on Reddit, X, and research communities.
+
+These turne</td>
+        <td>272</td>
+        <td><a href="https://x.com/heynavtoor/status/2019732432287850718" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@abhijitwt</td>
+        <td class="content-cell">&amp;gt; be cloudflare
+&amp;gt; spend years protecting sites from crawlers
+&amp;gt; launch /crawl
+&amp;gt; one API c</td>
+        <td>237</td>
+        <td><a href="https://x.com/abhijitwt/status/2031666691470680310" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aakashgupta</td>
+        <td class="content-cell">@barubaruc @gfodor Correct, same with GPT-4’s team at OpenAI.</td>
+        <td>168</td>
+        <td><a href="https://x.com/aakashgupta/status/2025403348829306897" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@heygurisingh</td>
+        <td class="content-cell">🚨BREAKING: The best voice AI model isn’t ElevenLabs anymore.
+
+A new open-source voice model just dro</td>
+        <td>212</td>
+        <td><a href="https://x.com/heygurisingh/status/1962670158033674251" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@birdabo</td>
+        <td class="content-cell">Anthropic ran their entire growth marketing with a non technical guy for 10 months.
+
+automated every</td>
+        <td>213</td>
+        <td><a href="https://x.com/birdabo/status/2031661483327951230" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@JoshKale</td>
+        <td class="content-cell">Wow this is pretty huge. Elon just laid out the xAI &amp;lt;&amp;gt; Tesla collab.
+It&#39;s Digital Optimus: Ful</td>
+        <td>150</td>
+        <td><a href="https://x.com/JoshKale/status/2031759067157233916" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@youcef_consult</td>
+        <td class="content-cell">On m&#39;explique ? 
+Donc là il bosse sans nous c&#39;est ça ? 
+
+Tous les jours il y a une nouveauté là ça v</td>
+        <td>123</td>
+        <td><a href="https://x.com/youcef_consult/status/2031813350766637456" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@phosphenq</td>
+        <td class="content-cell">the AI sports prediction model from this article had a critical flaw
+
+the model was receiving data i</td>
+        <td>78</td>
+        <td><a href="https://x.com/phosphenq/status/2031825546326204452" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aakashgupta</td>
+        <td class="content-cell">Assume the government can read every AI chat you’ve ever had. That’s the practical takeaway from Jud</td>
+        <td>105</td>
+        <td><a href="https://x.com/aakashgupta/status/2022351108279246946" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@Nate_Google_</td>
+        <td class="content-cell">cloudflare just made it one API call to crawl any website and return all the content in clean, reada</td>
+        <td>135</td>
+        <td><a href="https://x.com/Nate_Google_/status/2031757785558397367" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@mark_k</td>
+        <td class="content-cell">Meta has acquired @Moltbook, the social network built exclusively for AI agents.
+
+On the platform, o</td>
+        <td>197</td>
+        <td><a href="https://x.com/mark_k/status/2031393919880036791" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@krishdotdev</td>
+        <td class="content-cell">🚨 Have you noticed how insane Claude’s growth strategy is ?
+
+&amp;gt; For nearly 10 months, the entire g</td>
+        <td>154</td>
+        <td><a href="https://x.com/krishdotdev/status/2031592732423291043" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@kimmonismus</td>
+        <td class="content-cell">Anthropics growth marketing team is just 1 Person. And it has been confirmed. 
+
+Let that sink in for</td>
+        <td>164</td>
+        <td><a href="https://x.com/kimmonismus/status/2031649686344339908" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@singularity20xy</td>
+        <td class="content-cell">誰もがGPT-5.4のコンピュータ使用の狂気ぶりを理解していないようだ。
+
+私はGPT-5.4に、Microsoft PaintでOpenAIのロゴを描くよう頼んだ。
+
+コンピュータ使用APIはなし。</td>
+        <td>93</td>
+        <td><a href="https://x.com/singularity20xy/status/2031617370528387352" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@Yuchenj_UW</td>
+        <td class="content-cell">How is Anthropic automating Excel and PowerPoint before Microsoft 365 Copilot?</td>
+        <td>105</td>
+        <td><a href="https://x.com/Yuchenj_UW/status/2031793012335116456" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@cryptopunk7213</td>
+        <td class="content-cell">wtf did i just read
+
+NATO is equipping live cockroaches with  AI models to spy on enemies, steering </td>
+        <td>43</td>
+        <td><a href="https://x.com/cryptopunk7213/status/2031940538157453731" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@mkobach</td>
+        <td class="content-cell">It also helps when have one of the hottest products ever</td>
+        <td>33</td>
+        <td><a href="https://x.com/mkobach/status/2031930448532656266" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aakashgupta</td>
+        <td class="content-cell">Everyone’s missing the real story here.
+
+The 87% number is real. And it’s also increasingly irreleva</td>
+        <td>81</td>
+        <td><a href="https://x.com/aakashgupta/status/2031220281063477657" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@wildmindai</td>
+        <td class="content-cell">POV: you wake up and Google already killed a dozen AI startups with their new model
+
+- audio transcr</td>
+        <td>157</td>
+        <td><a href="https://x.com/wildmindai/status/2031440843437936962" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aakashgupta</td>
+        <td class="content-cell">Sam Altman said people saying “please” and “thank you” to ChatGPT costs OpenAI tens of millions of d</td>
+        <td>32</td>
+        <td><a href="https://x.com/aakashgupta/status/2031946736328196604" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@RayaneRachid_</td>
+        <td class="content-cell">🚨🚨 Definitely not a GPT model, the frontend style gives it away. It&#39;s either Deepseek V4 or a new Cl</td>
+        <td>39</td>
+        <td><a href="https://x.com/RayaneRachid_/status/2031850635809722523" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@BrianRoemmele</td>
+        <td class="content-cell">We are testing open source LabClaw at The Zero-Human Company and are quite impressed.
+
+It is a Skill</td>
+        <td>79</td>
+        <td><a href="https://x.com/BrianRoemmele/status/2031595151358087672" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@kloss_xyz</td>
+        <td class="content-cell">babe, wake up
+
+perplexity personal computer dropped https://t.co/ryab55jeF8</td>
+        <td>46</td>
+        <td><a href="https://x.com/kloss_xyz/status/2031812200793575910" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aakashgupta</td>
+        <td class="content-cell">Meta just paid real money to acqui-hire two guys whose platform was vibe-coded, had zero lines writt</td>
+        <td>88</td>
+        <td><a href="https://x.com/aakashgupta/status/2031605385694708158" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@karankendre</td>
+        <td class="content-cell">At this point they are shipping employees https://t.co/Yy7eKe8zzJ</td>
+        <td>31</td>
+        <td><a href="https://x.com/karankendre/status/2031818189374701657" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@morganlinton</td>
+        <td class="content-cell">This is a big deal.</td>
+        <td>27</td>
+        <td><a href="https://x.com/morganlinton/status/2031793202110611766" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aakashgupta</td>
+        <td class="content-cell">Claude went from #131 to #1 on the App Store in four weeks. This is the strongest moat signal any AI</td>
+        <td>59</td>
+        <td><a href="https://x.com/aakashgupta/status/2030516056805265749" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@korymath</td>
+        <td class="content-cell">this is the best thing i&#39;ve seen this year. 
+
+a masterpiece from the brilliant joseph viviano</td>
+        <td>70</td>
+        <td><a href="https://x.com/korymath/status/2031553240916021569" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aakashgupta</td>
+        <td class="content-cell">Anthropic is simultaneously powering Microsoft’s product and competing with it from inside Microsoft</td>
+        <td>23</td>
+        <td><a href="https://x.com/aakashgupta/status/2031908001406468164" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@dvassallo</td>
+        <td class="content-cell">My bet is open source will win this space, and OpenClaw is already that.</td>
+        <td>32</td>
+        <td><a href="https://x.com/dvassallo/status/2031837511245570390" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@VaibhavSisinty</td>
+        <td class="content-cell">Unpopular opinion: AI model launches are getting boring.
+
+Not because the models aren&#39;t improving, t</td>
+        <td>41</td>
+        <td><a href="https://x.com/VaibhavSisinty/status/2029629394151735743" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@AnishA_Moonka</td>
+        <td class="content-cell">Perplexity’s new product requires you to keep a Mac mini running 24/7 in your home. It’s called “Per</td>
+        <td>35</td>
+        <td><a href="https://x.com/AnishA_Moonka/status/2031821422600065438" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@WesRoth</td>
+        <td class="content-cell">Google Labs just expanded its AI marketing tool, Pomelli, to 170 countries.
+
+Instead of manually bui</td>
+        <td>59</td>
+        <td><a href="https://x.com/WesRoth/status/2031429887186305292" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@ylecun</td>
+        <td class="content-cell">RT @LiorOnAI: Yann just bet a billion dollars that the entire industry is building on the wrong foun</td>
+        <td>0</td>
+        <td><a href="https://x.com/ylecun/status/2031871777056387229" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@cryptopunk7213</td>
+        <td class="content-cell">&#34;HEY! every single junior level financial analyst and consultant just got replaced.&#34; 
+
+anthropic. go</td>
+        <td>34</td>
+        <td><a href="https://x.com/cryptopunk7213/status/2031794020066763231" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@adxtyahq</td>
+        <td class="content-cell">just watched a demo of the Huawei MateBook Fold
+
+apparently it can casually:
+- turn into an 18-inch </td>
+        <td>44</td>
+        <td><a href="https://x.com/adxtyahq/status/2031322368019452089" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aakashgupta</td>
+        <td class="content-cell">Everyone&#39;s comparing vibe coding tools on speed. Replit is playing a completely different game.
+
+Lov</td>
+        <td>30</td>
+        <td><a href="https://x.com/aakashgupta/status/2031773316596535773" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aakashgupta</td>
+        <td class="content-cell">The biggest bottleneck in AI coding tools has always been session architecture, not model intelligen</td>
+        <td>49</td>
+        <td><a href="https://x.com/aakashgupta/status/2031594397633237149" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aibi0123</td>
+        <td class="content-cell">これは今週最もぶっ飛んだAIリリースのひとつ
+
+Andrej KarpathyがAIエージェントがLLMのトレーニングを自ら改善するオープンソースツールを公開した
+
+1つのGPUが必要
+5分間の実験を</td>
+        <td>40</td>
+        <td><a href="https://x.com/aibi0123/status/2030879219249754431" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aakashgupta</td>
+        <td class="content-cell">.@frankdotlee made a counterintuitive claim about Claude Code context management.
+
+&#34;I actually don&#39;t</td>
+        <td>22</td>
+        <td><a href="https://x.com/aakashgupta/status/2027020275184017610" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aakashgupta</td>
+        <td class="content-cell">OpenAI made a strange decision this week. They released GPT-5.3-Codex and didn&#39;t put it in ChatGPT.
+</td>
+        <td>24</td>
+        <td><a href="https://x.com/aakashgupta/status/2021388464869282094" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@gudanglifehack</td>
+        <td class="content-cell">HOLY CRAP, CLAUDE JUST UNLOCKED FULL AI CODE REVIEW ON PULL REQUESTS!!! 🔥🔥
+
+This is straight-up nucl</td>
+        <td>13</td>
+        <td><a href="https://x.com/gudanglifehack/status/2031687987352961519" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@ylecun</td>
+        <td class="content-cell">RT @chriskclark: @amilabs AMI:
+The final frontier.
+These are the voyages of a new AI enterprise.
+Its</td>
+        <td>0</td>
+        <td><a href="https://x.com/ylecun/status/2031853650096615753" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@amanchatani1</td>
+        <td class="content-cell">RT @bansky: Steph gotta take 35 3s one day before it’s over and just see what happens
+
+Give the peop</td>
+        <td>0</td>
+        <td><a href="https://x.com/amanchatani1/status/2031708525173354673" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@krishdotdev</td>
+        <td class="content-cell">Save your time:
+
+Claude - Generaln AI assistant
+Claude Code - AI Coding Agent CLI
+Claude Cowork - Te</td>
+        <td>10</td>
+        <td><a href="https://x.com/krishdotdev/status/2029607253628833863" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@OpenAIDevs</td>
+        <td class="content-cell">RT @OpenAIDevs: Migrate to GPT-5.4 with this Codex skill:
+
+https://t.co/wpnaFKwkMn</td>
+        <td>0</td>
+        <td><a href="https://x.com/OpenAIDevs/status/2031498496323518846" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aakashgupta</td>
+        <td class="content-cell">If your evals feel impossible to align, this is why
+
+.@sh_reya explains why most teams overcomplicat</td>
+        <td>6</td>
+        <td><a href="https://x.com/aakashgupta/status/2012166791834058915" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@Amank1412</td>
+        <td class="content-cell">A GITHUB REPO WITH AN ENTIRE SETUP FOR AN AI AGENCY. https://t.co/lIy0AerKys</td>
+        <td>3</td>
+        <td><a href="https://x.com/Amank1412/status/2031802303364448353" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aakashgupta</td>
+        <td class="content-cell">3. Play with the best tool
+
+Claude code is not as scary as it sounds, even though code is in the nam</td>
+        <td>2</td>
+        <td><a href="https://x.com/aakashgupta/status/2018444113264476339" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@abhijitwt</td>
+        <td class="content-cell">Something weird happened with Claude recently.
+
+&amp;gt; during Daylight Saving Time, clocks jump from 2</td>
+        <td>1</td>
+        <td><a href="https://x.com/abhijitwt/status/2031913187768148286" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@shawnchauhan1</td>
+        <td class="content-cell">Prime Intellects prompt based RL training launch reframes AI development from hardware heavy ordeals</td>
+        <td>3</td>
+        <td><a href="https://x.com/shawnchauhan1/status/2031286494653211071" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@madsf88</td>
+        <td class="content-cell">@HyperM0nkey1 i’m thinking demo video recording with ai (landscape)</td>
+        <td>1</td>
+        <td><a href="https://x.com/madsf88/status/2031163891669991512" target="_blank">view</a></td>
+      </tr>
+    
+      <tr>
+        <td>twitter</td>
+        <td>@aakashgupta</td>
+        <td class="content-cell">📌 Want a Github walkthrough of the AI demo? Comment &#39;AI Demo&#39; + DM me. Repost to cut the line.
+
+Who </td>
+        <td>0</td>
+        <td><a href="https://x.com/aakashgupta/status/1967005362944700528" target="_blank">view</a></td>
+      </tr>
+    
+    </tbody>
+  </table>
+</details>
+</body>
+</html>
