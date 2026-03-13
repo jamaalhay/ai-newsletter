@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Weekly Roundup — 2026-03-13</title>
+<style>
+  :root { --bg: #fff; --fg: #1a1a1a; --muted: #666; --border: #e0e0e0; --accent: #2563eb; --card-bg: #f9fafb; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0f172a; --fg: #e2e8f0; --muted: #94a3b8; --border: #334155; --accent: #60a5fa; --card-bg: #1e293b; }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--fg); max-width: 800px; margin: 0 auto; padding: 24px 16px; line-height: 1.6; }
+  h1 { font-size: 1.5rem; margin-bottom: 4px; }
+  .date { color: var(--muted); margin-bottom: 24px; }
+  .summary { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 32px; }
+  .summary h2 { font-size: 1.1rem; margin: 16px 0 8px; border: none; padding: 0; }
+  .summary ul { padding-left: 20px; }
+  .summary li { margin-bottom: 12px; }
+  .summary p { margin-bottom: 12px; }
+  h2 { font-size: 1.2rem; margin: 24px 0 12px; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--border); }
+  th { font-weight: 600; color: var(--muted); font-size: 0.8rem; text-transform: uppercase; }
+  td a { color: var(--accent); text-decoration: none; }
+  td a:hover { text-decoration: underline; }
+  .content-cell { max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .back { display: inline-block; margin-bottom: 16px; color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<a href="../index.html" class="back">&larr; All summaries</a>
+<h1>AI Weekly Roundup</h1>
+<p class="date">Week of 2026-03-13</p>
+
+<div class="summary">
+# 🤖 This Week in AI: March 9-12, 2026
+
+## Top Developments
+
+**GPT-5.4 Launches with Computer Control & 1M Token Context**
+OpenAI released its latest model with native ability to control computers (click, type, read screens), supports up to 1 million tokens of context, and excels at spreadsheets and knowledge work. The model is rolling out across ChatGPT, API, and Codex with multiple speed tiers including a new `/fast` mode.
+
+**Claude Adds Code Review & Remote Control Features**
+Anthropic deployed multiple AI agents that automatically review pull requests for bugs, plus a Remote Control feature letting you start tasks on desktop and manage them from your phone. Meanwhile, Claude committed to staying completely ad-free while competitors explore monetization.
+
+**Karpathy Open-Sources AI Research Automation**
+Tesla's former AI lead released "autoresearch"—a system where AI agents autonomously improve their own code over time, plus a complete GPT implementation in just 243 lines of Python. His nanochat now trains GPT-2 in 2 hours on a single GPU.
+
+**OpenAI Deploys Models to Department of War**
+OpenAI announced an agreement to deploy AI models on classified military networks, marking significant expansion into government defense. CEO Sam Altman emphasized safety partnerships and fielded questions about the decision.
+
+**WiFi-Based Body Tracking Goes Open Source**
+Researchers open-sourced WiFi-DensePose, technology that maps a person's body position through walls using only WiFi signals—no cameras needed. The release raises both innovation and privacy concerns.
+
+**Programming Has Fundamentally Changed in December**
+Andrej Karpathy emphasized that AI coding agents crossed a critical capability threshold last month and "basically didn't work before December"—the shift happened suddenly, not gradually, changing how developers work daily.
+
+---
+
+## 🔥 Trend of the Week: The Great Unbundling of AI Labor
+
+The week revealed a pattern: AI is rapidly automating specific high-value jobs rather than replacing entire roles. Claude found 22 Firefox vulnerabilities in two weeks (work that required security specialists). GPT-5.4 handles spreadsheets like finance analysts. Automated code review replaces expensive senior developer time. The common thread? These aren't general replacements—they're surgical replacements of expensive *specialist tasks*. This means layoffs are coming for junior analysts, junior developers, and entry-level consultants, but the disruption follows specific job functions, not job titles. Companies are learning to "hire AI + one person" instead of "hire five people."
+
+---
+
+## 💡 Try It Yourself
+
+<ul style="font-size: 16px; line-height: 1.8;">
+  <li><strong>Build Your Own "Autoresearch" Loop:</strong> Use Karpathy's nanochat code to set up a simple script where Claude or GPT edits a Python file, trains a tiny model, logs the loss, then the loop suggests improvements. Run it overnight and see what optimizations emerge. (GitHub: cosmopunk/nanochat)</li>
+  
+  <li><strong>Test GPT-5.4 Computer Control:</strong> Grab the new API and try having it fill out a form or navigate a website screenshot. Start simple: "Log into this website and download the CSV file." Then graduate to "Book me a flight with these parameters."</li>
+  
+  <li><strong>Create a PR Reviewer Bot:</strong> Use Claude's new Code Review feature via API to automatically scan your GitHub pull requests and flag potential bugs before merging. Good way to see if it catches things your team misses.</li>
+</ul>
+</div>
+
+<h2>Top Items This Week</h2>
+<table>
+  <thead>
+    <tr><th>Source</th><th>Author</th><th>Content</th><th>Score</th><th>Link</th></tr>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@misak1nz</td>
+      <td class="content-cell">when your friend turns you into a sticker and won’t stop using it in the gc https://t.co/xmE9hdfY0t</td>
+      <td>128998</td>
+      <td><a href="https://x.com/misak1nz/status/2031978085705211986" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@barkmeta</td>
+      <td class="content-cell">Let me get this straight…
+
+OpenAI was founded as a nonprofit. Open source. For everyone. “To benefit</td>
+      <td>72133</td>
+      <td><a href="https://x.com/barkmeta/status/2032135097630278050" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@HavocFreestyle</td>
+      <td class="content-cell">a kiss during backshots is insane😭😭😭</td>
+      <td>54341</td>
+      <td><a href="https://x.com/HavocFreestyle/status/2032173899103027678" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@karpathy</td>
+      <td class="content-cell">Don&#39;t think of LLMs as entities but as simulators. For example, when exploring a topic, don&#39;t ask:
+
+</td>
+      <td>27831</td>
+      <td><a href="https://x.com/karpathy/status/1997731268969304070" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@parveen__tyagi</td>
+      <td class="content-cell">You can wake up one day and decide you’re done being the person who kept sabotaging your own life.
+
+</td>
+      <td>19795</td>
+      <td><a href="https://x.com/parveen__tyagi/status/2032220228307059023" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@bluewmist</td>
+      <td class="content-cell">men need intimacy like women need reassurance. same need, different mechanic. he goes a week untouch</td>
+      <td>27186</td>
+      <td><a href="https://x.com/bluewmist/status/2031957272360894521" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@karpathy</td>
+      <td class="content-cell">It is hard to communicate how much programming has changed due to AI in the last 2 months: not gradu</td>
+      <td>37097</td>
+      <td><a href="https://x.com/karpathy/status/2026731645169185220" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@lowkeyalbert</td>
+      <td class="content-cell">how it feels talking to someone who views every situation as a personal attack and lives in a consta</td>
+      <td>52981</td>
+      <td><a href="https://x.com/lowkeyalbert/status/2031872279055917395" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@Lovandfear</td>
+      <td class="content-cell">I love people with ADHD because they never actually forget anything. You just have to say the right </td>
+      <td>63963</td>
+      <td><a href="https://x.com/Lovandfear/status/2031974199812862273" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@karpathy</td>
+      <td class="content-cell">New art project. 
+Train and inference GPT in 243 lines of pure, dependency-free Python. This is the </td>
+      <td>25221</td>
+      <td><a href="https://x.com/karpathy/status/2021694437152157847" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@imfootballmad</td>
+      <td class="content-cell">He basically ran from Manchester to Wigan in under an hour. That’s nearly faster than the train 
+
+@n</td>
+      <td>63337</td>
+      <td><a href="https://x.com/imfootballmad/status/2031815271212617824" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@FakeBigBunjeee</td>
+      <td class="content-cell">the nigga who runs this account might actually be a psycho</td>
+      <td>43213</td>
+      <td><a href="https://x.com/FakeBigBunjeee/status/2032126899728548068" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@karpathy</td>
+      <td class="content-cell">I packaged up the &#34;autoresearch&#34; project into a new self-contained minimal repo if people would like</td>
+      <td>22204</td>
+      <td><a href="https://x.com/karpathy/status/2030371219518931079" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@heynavtoor</td>
+      <td class="content-cell">🚨BREAKING: MIT hooked people up to brain scanners while they used ChatGPT.
+
+What they found should c</td>
+      <td>19766</td>
+      <td><a href="https://x.com/heynavtoor/status/2029648638516023379" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@MadsPosting</td>
+      <td class="content-cell">Realizing it was me who didn&#39;t text back https://t.co/ICPtVOldCd</td>
+      <td>219602</td>
+      <td><a href="https://x.com/MadsPosting/status/2031026003665977381" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@charles270</td>
+      <td class="content-cell">Feels like something from The Boondocks</td>
+      <td>64703</td>
+      <td><a href="https://x.com/charles270/status/2031796668257927395" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@sama</td>
+      <td class="content-cell">Tonight, we reached an agreement with the Department of War to deploy our models in their classified</td>
+      <td>34402</td>
+      <td><a href="https://x.com/sama/status/2027578652477821175" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@karpathy</td>
+      <td class="content-cell">Bought a new Mac mini to properly tinker with claws over the weekend. The apple store person told me</td>
+      <td>17457</td>
+      <td><a href="https://x.com/karpathy/status/2024987174077432126" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@Bornakang</td>
+      <td class="content-cell">Hold on now they might be on to something</td>
+      <td>155240</td>
+      <td><a href="https://x.com/Bornakang/status/2030770574608175359" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@mckaycoppins</td>
+      <td class="content-cell">Last year, The Atlantic gave me $10K to gamble with. What started as a journalistic gimmick turned i</td>
+      <td>7172</td>
+      <td><a href="https://x.com/mckaycoppins/status/2032062208339833170" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@elonmusk</td>
+      <td class="content-cell">Many talented people over the past few years were declined an offer or even an interview @xAI. My ap</td>
+      <td>6190</td>
+      <td><a href="https://x.com/elonmusk/status/2032341856944865487" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@DiscussingFilm</td>
+      <td class="content-cell">‘PROJECT HAIL MARY’ debuts with 95% on Rotten Tomatoes.
+
+Described as one of the best sci-fi films o</td>
+      <td>93127</td>
+      <td><a href="https://x.com/DiscussingFilm/status/2031361316447760539" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@karpathy</td>
+      <td class="content-cell">Very interested in what the coming era of highly bespoke software might look like.
+
+Example from thi</td>
+      <td>12023</td>
+      <td><a href="https://x.com/karpathy/status/2024583544157458452" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@jazzbeargryllz</td>
+      <td class="content-cell">It’s pretty wild to see someone create their own signature move this far into a sport</td>
+      <td>6171</td>
+      <td><a href="https://x.com/jazzbeargryllz/status/2032118937572524315" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@hamptonism</td>
+      <td class="content-cell">Perplexity just became the the first Al company to truly go head-to-head with the Bloomberg Terminal</td>
+      <td>17782</td>
+      <td><a href="https://x.com/hamptonism/status/2026778742094442959" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@dsonoiki</td>
+      <td class="content-cell">Nobody understands the bond between a boy and the volume-scoring, shot-chucking guard he watched whe</td>
+      <td>17660</td>
+      <td><a href="https://x.com/dsonoiki/status/2031889712726876211" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@karpathy</td>
+      <td class="content-cell">CLIs are super exciting precisely because they are a &#34;legacy&#34; technology, which means AI agents can </td>
+      <td>11725</td>
+      <td><a href="https://x.com/karpathy/status/2026360908398862478" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@Youtubable</td>
+      <td class="content-cell">Imagine a Pokemon game where you start in Kanto and travel through 6 regions, ending in Kalos.
+
+Kant</td>
+      <td>23938</td>
+      <td><a href="https://x.com/Youtubable/status/2031923694818247164" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@lochan_twt</td>
+      <td class="content-cell">startup idea : 
+
+a vs code extension where i can watch instagram reels while my ai is writing code</td>
+      <td>15574</td>
+      <td><a href="https://x.com/lochan_twt/status/2032068589176361421" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@karpathy</td>
+      <td class="content-cell">I had the same thought so I&#39;ve been playing with it in nanochat. E.g. here&#39;s 8 agents (4 claude, 4 c</td>
+      <td>8641</td>
+      <td><a href="https://x.com/karpathy/status/2027521323275325622" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@karpathy</td>
+      <td class="content-cell">Three days ago I left autoresearch tuning nanochat for ~2 days on depth=12 model. It found ~20 chang</td>
+      <td>7430</td>
+      <td><a href="https://x.com/karpathy/status/2031135152349524125" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@0xleegenz</td>
+      <td class="content-cell">Earth review:
+
+- Takes 3 years to unlock voice chat
+- Tutorial takes 18 years
+- Banned at level 60-8</td>
+      <td>13084</td>
+      <td><a href="https://x.com/0xleegenz/status/2032101811210076241" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@claudeai</td>
+      <td class="content-cell">Claude can now build interactive charts and diagrams, directly in the chat.
+
+Available today in beta</td>
+      <td>15497</td>
+      <td><a href="https://x.com/claudeai/status/2032124273587077133" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@karpathy</td>
+      <td class="content-cell">Expectation: the age of the IDE is over
+Reality: we’re going to need a bigger IDE
+(imo).
+
+It just lo</td>
+      <td>3753</td>
+      <td><a href="https://x.com/karpathy/status/2031767720933634100" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@ChihiroDLoki</td>
+      <td class="content-cell">One piece Action vs Anime https://t.co/kMT0eMELZS</td>
+      <td>44716</td>
+      <td><a href="https://x.com/ChihiroDLoki/status/2031421754254512153" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@34GotGame</td>
+      <td class="content-cell">LMAOOOOO smart 😭😭 https://t.co/0APCqI44vP</td>
+      <td>8088</td>
+      <td><a href="https://x.com/34GotGame/status/2032155162345959526" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@karpathy</td>
+      <td class="content-cell">Congrats on the launch @simile_ai ! (and I am excited to be involved as a small angel.)
+
+Simile is w</td>
+      <td>8251</td>
+      <td><a href="https://x.com/karpathy/status/2022041235188580788" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@karpathy</td>
+      <td class="content-cell">I think it must be a very interesting time to be in programming languages and formal methods because</td>
+      <td>8075</td>
+      <td><a href="https://x.com/karpathy/status/2023476423055601903" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@elonmusk</td>
+      <td class="content-cell">The lunatic left that took over Twitter was Wormtongue to the World.
+
+Firing @Jack was the final str</td>
+      <td>87055</td>
+      <td><a href="https://x.com/elonmusk/status/2030747211810709699" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@N8Programs</td>
+      <td class="content-cell">This image has done irreparable damage to the LLM consciousness debate.</td>
+      <td>55809</td>
+      <td><a href="https://x.com/N8Programs/status/2030059623382696053" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@karpathy</td>
+      <td class="content-cell">With the coming tsunami of demand for tokens, there are significant opportunities to orchestrate the</td>
+      <td>7421</td>
+      <td><a href="https://x.com/karpathy/status/2026452488434651264" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@claudeai</td>
+      <td class="content-cell">Introducing the Claude Marketplace, a way for enterprises to simplify their procurement of AI tools.</td>
+      <td>19339</td>
+      <td><a href="https://x.com/claudeai/status/2029966517497122886" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@caffeinatedmint</td>
+      <td class="content-cell">this is how satoru gojo must feel</td>
+      <td>58469</td>
+      <td><a href="https://x.com/caffeinatedmint/status/2031070304622006312" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@BaT_MaN_23</td>
+      <td class="content-cell">Me after using Claude instead of GPT for the first time and realizing I might be jobless in five yea</td>
+      <td>53535</td>
+      <td><a href="https://x.com/BaT_MaN_23/status/2031032558226722855" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@karpathy</td>
+      <td class="content-cell">nanochat now trains GPT-2 capability model in just 2 hours on a single 8XH100 node (down from ~3 hou</td>
+      <td>6176</td>
+      <td><a href="https://x.com/karpathy/status/2029701092347630069" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@Kalshi</td>
+      <td class="content-cell">JUST IN: Nvidia and Palantir have partnered to create new &#34;AI operating system&#34;</td>
+      <td>10508</td>
+      <td><a href="https://x.com/Kalshi/status/2032059153305243707" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@sama</td>
+      <td class="content-cell">GPT-5.4 is launching, available now in the API and Codex and rolling out over the course of the day </td>
+      <td>12939</td>
+      <td><a href="https://x.com/sama/status/2029622732594499630" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@ohlookitsrafa</td>
+      <td class="content-cell">Bam if he was in that helicopter https://t.co/fNJ7PM7h5E</td>
+      <td>35669</td>
+      <td><a href="https://x.com/ohlookitsrafa/status/2031553193465762099" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@bansky</td>
+      <td class="content-cell">Steph gotta take 35 3s one day before it’s over and just see what happens
+
+Give the people what they</td>
+      <td>39387</td>
+      <td><a href="https://x.com/bansky/status/2031554411042857266" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@adaenechi</td>
+      <td class="content-cell">“When every single person having sex uses the same vocabulary, when does it become obvious that sex </td>
+      <td>8302</td>
+      <td><a href="https://x.com/adaenechi/status/2031992649293480223" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@sama</td>
+      <td class="content-cell">I&#39;d like to answer questions about our work with the DoW and our thinking over the past few days. Pl</td>
+      <td>10487</td>
+      <td><a href="https://x.com/sama/status/2027900042720498089" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@karpathy</td>
+      <td class="content-cell">The next step for autoresearch is that it has to be asynchronously massively collaborative for agent</td>
+      <td>5289</td>
+      <td><a href="https://x.com/karpathy/status/2030705271627284816" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@_devJNS</td>
+      <td class="content-cell">Vibe coders after realizing they&#39;ll still have to dance on TikTok to market their SaaS. https://t.co</td>
+      <td>7897</td>
+      <td><a href="https://x.com/_devJNS/status/2031748422890324283" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@WhiteHouse</td>
+      <td class="content-cell">UNDEFEATED. https://t.co/Jt69bcag5y</td>
+      <td>10811</td>
+      <td><a href="https://x.com/WhiteHouse/status/2032115039985881556" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@sama</td>
+      <td class="content-cell">GPT-5.4 is great at coding, knowledge work, computer use, etc, and it&#39;s nice to see how much people </td>
+      <td>11108</td>
+      <td><a href="https://x.com/sama/status/2030319489993298349" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@josephdviviano</td>
+      <td class="content-cell">me: &#34;can you use whatever resources you like, and python, to generate a short &#39;youtube poop&#39; video a</td>
+      <td>12093</td>
+      <td><a href="https://x.com/josephdviviano/status/2031196768424132881" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@TheMisterMarcus</td>
+      <td class="content-cell">My God.</td>
+      <td>4433</td>
+      <td><a href="https://x.com/TheMisterMarcus/status/2032218721696076150" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@Bitcoin_Teddy</td>
+      <td class="content-cell">WATER HEATER PAYS YOU IN BITCOIN
+
+Superheat unveils a $2,000 electric water heater that mines Bitcoi</td>
+      <td>2218</td>
+      <td><a href="https://x.com/Bitcoin_Teddy/status/2032284008378143176" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@DCinvestor</td>
+      <td class="content-cell">this is a manifestation of the moral collapse in the US, where even in situations where we choose or</td>
+      <td>3045</td>
+      <td><a href="https://x.com/DCinvestor/status/2032226126865801545" target="_blank">view</a></td>
+    </tr>
+  
+    <tr>
+      <td>twitter</td>
+      <td>@karpathy</td>
+      <td class="content-cell">There was a nice time where researchers talked about various ideas quite openly on twitter. (before </td>
+      <td>4477</td>
+      <td><a href="https://x.com/karpathy/status/2029696850366971921" target="_blank">view</a></td>
+    </tr>
+  
+  </tbody>
+</table>
+</body>
+</html>
